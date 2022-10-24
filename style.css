@@ -1,0 +1,99 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #911DF2;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+.digital-clock {
+    width: 250px;
+    background-color: #5B1EFC;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    border: 1px solid white;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.digital-clock div {
+    padding: 10px;
+    background-color: #1D8DF2;
+}
+
+.analog-clock {
+    background-image: url("Pngtreeabstractwallclocktemplate_6656018.png");
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 10px solid #1D8DF2;
+    box-sizing: border-box;
+    position: relative;
+    transform: rotate(-180deg);
+}
+
+.analog-clock__center {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1D8DF2;
+}
+.analog-clock__minutes {
+    width: 3px;
+    height: 75px;
+    background-color: #5B1EFC;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    transform-origin: top;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.analog-clock__second {
+    width: 2px;
+    height: 85px;
+    background-color: #29106b;
+    position: absolute;
+    border-radius: 2px;
+    z-index: 2;
+    transform-origin: top;
+    left: 30%;
+    top: 30%;
+}
+
+.analog-clock__hours {
+    width: 4px;
+    height: 65px;
+    background-color: #5333aa;
+    position: absolute;
+    border-radius: 2px;
+    z-index: 0;
+    transform-origin: top;
+    left: 30%;
+    top: 30%;
+}
+@media (max-width: 540px) {
+    .container {
+        flex-direction: column;
+    }
+}
